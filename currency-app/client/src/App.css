@@ -1,0 +1,540 @@
+:root {
+  --primary-color: 7, 36, 42;
+  --green: 179, 239, 210;
+  --white: 243, 243, 244;
+}
+
+.app header {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(var(--primary-color));
+  padding: 0 4%;
+}
+
+.app .navbar .logo h3 {
+  color: rgb(var(--green));
+  font-weight: 300;
+  cursor: pointer;
+}
+.app .navbar .logo h3 span {
+  color: rgb(var(--white));
+}
+
+.app .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.app .navbar .navbar-nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app .navbar .navbar-nav a {
+  text-decoration: none;
+  color: rgb(var(--white));
+  font-size: 1.03em;
+  font-weight: 400;
+  padding: 10px 17px;
+  border-radius: 8px;
+  transition: 0.2s linear;
+}
+
+.app .navbar .navbar-nav a:hover {
+  background-color: rgba(var(--green), 0.15);
+}
+
+.app .navbar .navbar-button {
+  width: 205px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.app .navbar .navbar-button button {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.app .navbar .navbar-button button a {
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: rgb(var(--white));
+  font-size: 1.15em;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.app .navbar .navbar-button button.login {
+  background-color: rgb(var(--primary-color));
+}
+.app .navbar .navbar-button button.login:hover {
+  background-color: rgba(var(--white), 0.2);
+}
+.app .navbar .navbar-button button.regis {
+  background-color: #2e694b;
+}
+.app .navbar .navbar-button button.regis:hover {
+  opacity: 0.8;
+}
+
+.container-home {
+  /* display: flex; */
+  width: 80vw;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+
+.container-saving {
+  width: 45vw;
+  height: 350px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-home .title-exchange,
+.container-saving .title-saving {
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+.container-home .title-exchange p,
+.container-saving .title-saving p {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #2e694b;
+}
+
+.container-home .content-home {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #f3f3f4;
+  box-shadow: 30px 30px 60px #cfcfcf, -30px -30px 60px #ffffff;
+}
+
+.container-saving .content-saving {
+  width: 100%;
+  margin: auto;
+  height: 425px;
+  padding: 40px 0;
+  border-radius: 25px;
+  background-color: #f3f3f4;
+  box-shadow: 30px 30px 60px #cfcfcf, -30px -30px 60px #ffffff;
+}
+
+.container-home .content-home .list {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  /* z-index: 1; */
+  position: relative;
+}
+
+.container-saving .content-saving .list {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-saving .content-saving .error-message {
+  position: relative;
+  left: 90px;
+  top: 6px;
+  font-size: 0.8em;
+}
+
+.container-home .content-home .list .currency {
+  position: relative;
+  height: 90px;
+  margin: auto;
+}
+
+.container-saving .content-saving .list .saving {
+  width: 70%;
+  height: 70px;
+}
+
+.container-home .content-home .list .currency label,
+.container-saving .content-saving .list .saving label {
+  font-size: 1em;
+  font-weight: 400;
+  color: #2e694b;
+  /* padding-bottom: 30px; */
+}
+
+.container-home .content-home .list .currency input[type="text"] {
+  width: 400px;
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 6px;
+  border: none;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+  outline: none;
+  color: dimgray;
+}
+
+.container-saving .content-saving .list .saving input[type="text"],
+.container-saving .content-saving .list .saving input[type="number"] {
+  width: 400px;
+  height: 40px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: none;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+  outline: none;
+  color: dimgray;
+}
+/* 
+.container-saving .content-saving form {
+  width: 100%;
+} */
+
+.container-saving .content-saving form .save {
+  width: 80%;
+  margin: 18px 0 0 58px;
+  padding: 10px 0;
+  background: #2e694b;
+  border: none;
+  border-radius: 8px;
+  color: rgb(var(--white));
+  font-size: 1em;
+  outline: none;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.container-saving .content-saving form .save:hover {
+  background-color: #2a583f;
+}
+
+.container-saving .content-saving .modal-button {
+  width: 80%;
+  margin: 10px 0 0 58px;
+  padding: 10px;
+  background: #05161a;
+  border: none;
+  border-radius: 8px;
+  color: rgb(var(--white));
+  font-size: 1em;
+  outline: none;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.container-saving .content-saving .modal-button:hover {
+  opacity: 0.9;
+}
+
+.flag-icon {
+  font-size: 1.5em;
+  position: absolute;
+  top: 38px;
+  right: 64px;
+  z-index: 5;
+}
+
+select {
+  padding: 12px 0 12px 35px;
+  border-radius: 6px;
+  position: absolute;
+  right: 5px;
+  top: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.container-home .content-home .list .icon-change {
+  font-size: 1.3em;
+  padding: 10px 10px 5px 10px;
+  color: #2e694b;
+  cursor: pointer;
+}
+
+.modal-container {
+  background-color: rgba(var(--primary-color), 0.98);
+  width: 800px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: -100px;
+  height: 500px;
+  padding: 35px;
+  display: flex;
+  border-radius: 10px;
+}
+
+.modal-container .modal-content {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-container .modal-content h2 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #cfcfcf;
+}
+
+.modal-container .modal-content table {
+  width: 100%;
+  color: #cfcfcf;
+}
+
+.modal-container .modal-content table thead tr {
+  padding-bottom: 10px;
+}
+
+.modal-container .modal-content table th {
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 7px;
+}
+
+.modal-container .modal-content table td {
+  font-size: 1em;
+  font-weight: 200;
+  padding: 7px;
+}
+
+.button-modal {
+  display: flex;
+  gap: 10px;
+}
+
+.button-modal button {
+  width: 70px;
+  height: 25px;
+  font-size: 0.8em;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: #2e694b;
+  color: #cfcfcf;
+  cursor: pointer;
+}
+
+.button-modal button:hover {
+  opacity: 0.8;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 20px;
+}
+
+.closeIcon {
+  cursor: pointer;
+  font-size: 1.7em;
+  color: #cfcfcf;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 4%;
+}
+
+.bottom .result-converted {
+  color: #2e694b;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.bottom input {
+  background-color: #2e694b;
+  padding: 10px 40px;
+  border: none;
+  outline: none;
+  color: rgb(var(--white));
+  border-radius: 7px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.bottom input:hover {
+  background-color: #2a583f;
+}
+
+.container-about {
+  width: 60vw;
+  height: 300px;
+  /* background-color: #2a583f; */
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-about .box {
+  display: flex;
+  gap: 20px;
+}
+
+.container-about .box .title-about {
+  font-size: 3em;
+  font-weight: 700;
+  color: #2e694b;
+}
+
+.container-about .box .content {
+  margin-top: 50px;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #05161a;
+}
+
+.container-about .box .content span {
+  color: #2a583f;
+  font-weight: 500;
+}
+
+.container-login,
+.container-regis {
+  width: 40vw;
+  height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-login .content-login,
+.container-regis .content-regis {
+  width: 100%;
+  margin: auto;
+  height: 380px;
+  padding: 40px 0;
+  border-radius: 25px;
+  background-color: #f3f3f4;
+  box-shadow: 30px 30px 60px #cfcfcf, -30px -30px 60px #ffffff;
+}
+
+.container-login .content-login .error-message {
+  position: relative;
+  left: 80px;
+  top: 6px;
+  font-size: 0.8em;
+}
+
+.container-login .title-login,
+.container-regis .content-regis .title-regis {
+  text-align: center;
+}
+
+.container-login .title-login p,
+.container-regis .title-regis p {
+  font-size: 1.5em;
+  color: #2a583f;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.container-login .list,
+.container-regis .list {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-login .content-login .list .login,
+.container-regis .content-regis .list .regis {
+  width: 70%;
+  height: 70px;
+}
+
+.container-login .content-login .list .login label,
+.container-regis .content-regis .list .regis label {
+  font-size: 1em;
+  font-weight: 400;
+  color: #2e694b;
+}
+
+.container-login .content-login .list .login input[type="text"],
+.container-login .content-login .list .login input[type="password"],
+.container-regis .content-regis .list .regis input[type="text"],
+.container-regis .content-regis .list .regis input[type="password"] {
+  width: 360px;
+  height: 40px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: none;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+  outline: none;
+  color: dimgray;
+}
+
+.container-login .content-login form .login-button,
+.container-regis .content-regis form .regis-button {
+  width: 80%;
+  margin: 18px 0 0 53px;
+  padding: 10px 0;
+  background: #2e694b;
+  border: none;
+  border-radius: 8px;
+  color: rgb(var(--white));
+  font-size: 1em;
+  outline: none;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.container-login.content-login form .login-button:hover,
+.container-regis.content-regis form .regis-button:hover {
+  background-color: #2a583f;
+}
+
+.navbar-button .user-login {
+  display: flex;
+  gap: 11px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  align-items: center;
+}
+
+.navbar-button .user-login span {
+  width: 200px;
+  font-weight: 500;
+  color: rgb(var(--white));
+}
+
+.navbar-button .user-login button.logout {
+  width: 75%;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: #2a583f;
+  color: rgb(var(--white));
+  font-size: 0.9em;
+}
